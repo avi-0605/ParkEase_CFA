@@ -2,6 +2,8 @@
 
 A full-stack MERN application that simplifies parking management in urban areas. ParkEase allows users to find, book, and manage parking slots in real-time, while providing administrators with comprehensive tools for managing parking lots, pricing, and analytics.
 
+## Deploy link : https://park-ease-cfa.vercel.app/
+
 
 ## 🎯 Overview
 
