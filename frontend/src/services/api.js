@@ -1,8 +1,14 @@
 import axios from 'axios';
 
-// Use environment variable in production, fallback to localhost for local dev
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || 'http://localhost:5001/api';
+// Choose backend URL based on where the app is running
+const isProd =
+  typeof window !== 'undefined' &&
+  window.location.hostname !== 'localhost' &&
+  window.location.hostname !== '127.0.0.1';
+
+const API_BASE_URL = isProd
+  ? 'https://parkease-cfa-1.onrender.com/api' // Render backend in production
+  : 'http://localhost:5001/api'; // Local backend for dev
 
 const API = axios.create({
   baseURL: API_BASE_URL,
